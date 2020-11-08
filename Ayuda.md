@@ -21,3 +21,4 @@ Eliminar la base de datos
 ```bash
 dotnet ef database drop
 ```
+Eliminar Migración
