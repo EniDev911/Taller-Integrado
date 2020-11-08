@@ -21,4 +21,15 @@ Eliminar la base de datos
 ```bash
 dotnet ef database drop
 ```
-Eliminar Migración
+Eliminar las Migraciones
+```bash
+dotnet ef migrations remove
+```
+Agregar nueva migración
+```bash
+dotnet ef migrations add "nueva migración" -o Data/Migrations
+```
+Crear la base de datos
+```bash
+dotnet ef database update
+```

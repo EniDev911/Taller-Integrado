@@ -13,6 +13,26 @@ namespace crosam.Data
             : base(options)
         {
         }
-        
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            //Configuración que se ejecuta primero
+            base.OnModelCreating(builder);
+            // EF toma la ultima configuración
+            builder.Entity<User>(entityTypeBuilder =>
+             {
+                 entityTypeBuilder.ToTable("Users");
+
+                 entityTypeBuilder.Property(u => u.UserName)
+                 .HasMaxLength(50)
+                 .HasDefaultValue(0);
+
+                 entityTypeBuilder.Property(u => u.Sex)
+                 .HasMaxLength(1);
+
+             });
+ 
+        }
+
     }
 }
