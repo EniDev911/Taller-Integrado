@@ -33,3 +33,10 @@ Crear la base de datos
 ```bash
 dotnet ef database update
 ```
+
+## Herramientas instaladas
+Listar las herramientas instaladas en el sistema extendida de dotnet de manera global
+```bash
+dotnet tool list --global
+```
+
